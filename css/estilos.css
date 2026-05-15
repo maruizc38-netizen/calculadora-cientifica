@@ -1,18 +1,126 @@
-/*.numero{
-    background-color: #f0f0f0;
-    border: 1px solid #ccc;
-    padding: 10px;
-    margin: 5px;
-    cursor: pointer;
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+    text-decoration: none;
+    list-style: none;
 }
 
-numero:hover{
-    background-color: #e0e0e0;
+body{
+    background: linear-gradient(135deg, #b456df, #310b78);
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
 }
-.simbolo{
-    background-color: #d0d0d0;
-    border: 1px solid #bbb;
-    padding: 10px;
-    margin: 5px;
+
+/* TITULO */
+center{
+    width: 100%;
+}
+
+h1{
+    width: 600px;
+    height: 70px;
+    margin: 20px auto;
+    line-height: 70px;
+    background: darkorchid;
+    color: white;
+    font-size: 35px;
+    font-weight: bold;
+    border-radius: 20px;
+    border: 4px solid #ffffff50;
+    box-shadow: 0px 5px 15px rgba(0,0,0,0.4);
+    letter-spacing: 4px;
+}
+
+/*CALCULADORA */
+#calculadora{
+    width: 350px;
+    background: #5f5d5d;
+    padding: 25px;
+    border-radius: 25px;
+    box-shadow: 0px 10px 30px rgba(0,0,0,0.5);
+}
+
+/* PANTALLA */
+#operaciones{
+    width: 100%;
+    height: 80px;
+    background: #608b60;
+    color: #000000;
+    font-size: 40px;
+    text-align: right;
+    line-height: 80px;
+    padding-right: 20px;
+    border-radius: 15px;
+    margin-bottom: 20px;
+    overflow: hidden;
+    border: 2px solid #333;
+}
+
+/* BOTONES*/ 
+ul{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 15px;
+}
+
+li{
+    height: 65px;
+    border-radius: 15px;
+    text-align: center;
+    line-height: 65px;
+    font-size: 28px;
+    font-weight: bold;
     cursor: pointer;
-}*/
+    transition: 0.3s;
+    user-select: none;
+}
+
+/* NUMEROS */
+.numero{
+    background: #000000;
+    color: white;
+    border: 3px solid #ada5a5;
+}
+
+.numero:hover{
+    background: #505050;
+    transform: scale(1.05);
+}
+
+/* SIMBOLOS*/ 
+.simbolo{
+    background: rgb(0, 0, 0);
+    color: white;
+    border: 3px solid #ada5a5;
+}
+
+.simbolo:hover{
+    background: #373737;
+    transform: scale(1.05);
+}
+
+/* BOTON BORRAR */
+#borrar{
+    width: 100%;
+    height: 60px;
+    margin-top: 20px;
+    background: crimson;
+    color: white;
+    text-align: center;
+    line-height: 60px;
+    border-radius: 15px;
+    font-size: 24px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+#borrar:hover{
+    background: red;
+    transform: scale(1.03);
+}
