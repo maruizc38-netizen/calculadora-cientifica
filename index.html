@@ -1,13 +1,17 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>calculadora</title>
     <link rel="stylesheet" href="/css/estilos.css">
 </head>
+
 <body>
-    <center><h1>C4LCUL4D0R4</h1></center>
+    <center>
+        <h1>C4LCUL4D0R4</h1>
+    </center>
     <div id="calculadora">
         <div id="operaciones">0</div>
         <ul>
@@ -25,11 +29,14 @@
             <li class="simbolo">*</li>
             <li class="numero">0</li>
             <li class="simbolo">/</li>
-            <li class="simbolo">.</li>
-            <li class="simbolo">=</li>
+            <li class="decimal">.</li>
+            <li class="igual">=</li>
         </ul>
-        <div id="borrar">borrar</div>
+        <div id="borrar" onclick="m.borrarCalculadora()">borrar</div>
     </div>
-    
+
+    <script src="/js/funcional.js" ></script>
 </body>
+
+
 </html>

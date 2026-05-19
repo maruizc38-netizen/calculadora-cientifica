@@ -1,4 +1,4 @@
-*{
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -7,7 +7,7 @@
     list-style: none;
 }
 
-body{
+body {
     background: linear-gradient(135deg, #b456df, #310b78);
     min-height: 100vh;
     display: flex;
@@ -17,11 +17,11 @@ body{
 }
 
 /* TITULO */
-center{
+center {
     width: 100%;
 }
 
-h1{
+h1 {
     width: 600px;
     height: 70px;
     margin: 20px auto;
@@ -32,21 +32,21 @@ h1{
     font-weight: bold;
     border-radius: 20px;
     border: 4px solid #ffffff50;
-    box-shadow: 0px 5px 15px rgba(0,0,0,0.4);
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.4);
     letter-spacing: 4px;
 }
 
 /*CALCULADORA */
-#calculadora{
+#calculadora {
     width: 350px;
     background: #5f5d5d;
     padding: 25px;
     border-radius: 25px;
-    box-shadow: 0px 10px 30px rgba(0,0,0,0.5);
+    box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.5);
 }
 
 /* PANTALLA */
-#operaciones{
+#operaciones {
     width: 100%;
     height: 80px;
     background: #608b60;
@@ -61,14 +61,14 @@ h1{
     border: 2px solid #333;
 }
 
-/* BOTONES*/ 
-ul{
+/* BOTONES*/
+ul {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     gap: 15px;
 }
 
-li{
+li {
     height: 65px;
     border-radius: 15px;
     text-align: center;
@@ -81,31 +81,53 @@ li{
 }
 
 /* NUMEROS */
-.numero{
+.numero {
     background: #000000;
     color: white;
     border: 3px solid #ada5a5;
 }
 
-.numero:hover{
+.numero:hover {
     background: #505050;
     transform: scale(1.05);
 }
 
-/* SIMBOLOS*/ 
-.simbolo{
+/* SIMBOLOS*/
+.decimal {
     background: rgb(0, 0, 0);
     color: white;
     border: 3px solid #ada5a5;
 }
 
-.simbolo:hover{
+.decimal:hover {
+    background: #373737;
+    transform: scale(1.05);
+}
+
+.igual {
+    background: rgb(0, 0, 0);
+    color: white;
+    border: 3px solid #ada5a5;
+}
+
+.igual:hover {
+    background: #373737;
+    transform: scale(1.05);
+}
+
+.simbolo {
+    background: rgb(0, 0, 0);
+    color: white;
+    border: 3px solid #ada5a5;
+}
+
+.simbolo:hover {
     background: #373737;
     transform: scale(1.05);
 }
 
 /* BOTON BORRAR */
-#borrar{
+#borrar {
     width: 100%;
     height: 60px;
     margin-top: 20px;
@@ -120,7 +142,7 @@ li{
     transition: 0.3s;
 }
 
-#borrar:hover{
+#borrar:hover {
     background: red;
     transform: scale(1.03);
 }
