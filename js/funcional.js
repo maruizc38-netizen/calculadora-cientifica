@@ -162,7 +162,7 @@ let m = {
 
                 if (p.operaciones.innerHTML.includes("/0")) {
 
-                    p.operaciones.innerHTML = "Error";
+                    p.operaciones.innerHTML = "ERROR";
 
                 } else {
 
