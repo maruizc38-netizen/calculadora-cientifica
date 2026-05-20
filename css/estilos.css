@@ -93,6 +93,17 @@ li {
 }
 
 /* SIMBOLOS*/
+.simboloes {
+    background: rgb(0, 0, 0);
+    color: white;
+    border: 3px solid #ada5a5;
+}
+
+.simboloes:hover {
+    background: #373737;
+    transform: scale(1.05);
+}
+
 .decimal {
     background: rgb(0, 0, 0);
     color: white;

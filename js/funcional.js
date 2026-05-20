@@ -4,8 +4,8 @@ let p = {
     accion: null,
     digito: null,
     operaciones: document.querySelector("#operaciones"),
-    cantidadSignos: 0,
-    cantidaddecimales: false,
+    cantisignos: 0,
+    cantdecimales: false,
     resultado: false
 }
 
@@ -39,40 +39,84 @@ let m = {
 
             case "numero":
 
-                if (p.operaciones.textContent == "0") {
+                p.cantisignos = 0;
 
-                    p.operaciones.textContent = digito;
+                if (p.operaciones.innerHTML == "0") {
+
+                    p.operaciones.innerHTML = digito;
 
                 } else {
 
-                    p.operaciones.textContent += digito;
+                    if (p.resultado) {
+
+                        p.resultado = false;
+                        p.operaciones.innerHTML = digito;
+
+                    } else {
+
+                        p.operaciones.innerHTML += digito;
+
+                    }
 
                 }
+
                 break;
 
             case "simbolo":
 
-                p.operaciones.innerHTML += digito;
+                p.cantisignos++;
+
+                if (p.cantisignos == 1) {
+
+                    if (p.operaciones.innerHTML == "0") {
+
+                        p.operaciones.innerHTML = "0";
+
+                    } else {
+
+                        p.operaciones.innerHTML += digito;
+                        p.cantdecimales = false;
+
+                    }
+
+                }
 
                 break;
 
             case "decimal":
 
-                p.operaciones.innerHTML += digito;
+                if (!p.cantdecimales) {
+
+                    p.operaciones.innerHTML += digito;
+                    p.cantdecimales = true;
+
+                }
 
                 break;
 
             case "igual":
 
-                p.operaciones.innerHTML = eval(p.operaciones.innerHTML);
+                if (p.operaciones.innerHTML.includes("/0")) {
+
+                    p.operaciones.innerHTML = "Error";
+
+                } else {
+
+                    p.operaciones.innerHTML = eval(p.operaciones.innerHTML);
+                    p.resultado = true;
+
+                }
 
                 break;
 
         }
 
     },
-    borrarCalculadora: function(){
-        p.operaciones.innerHTML = 0 ;
+
+    borrarCalculadora: function () {
+
+        p.operaciones.innerHTML = 0;
+
     }
 
 }
