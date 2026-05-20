@@ -20,6 +20,8 @@ let m = {
 
         }
 
+        document.addEventListener("keydown", m.teclado);
+
     },
 
     oprimirtecla: function (tecla) {
@@ -30,6 +32,36 @@ let m = {
         console.log(p.digito);
 
         m.calculadora(p.accion, p.digito);
+
+    },
+
+    teclado: function (evento) {
+
+        let tecla = evento.key;
+
+        if (!isNaN(tecla)) {
+
+            m.calculadora("numero", tecla);
+
+        }
+
+        else if (tecla == "+" || tecla == "-" || tecla == "*" || tecla == "/") {
+
+            m.calculadora("simbolo", tecla);
+
+        }
+
+        else if (tecla == ".") {
+
+            m.calculadora("decimal", tecla);
+
+        }
+
+        else if (tecla == "Enter") {
+
+            m.calculadora("igual", "=");
+
+        }
 
     },
 
@@ -78,6 +110,38 @@ let m = {
                         p.cantdecimales = false;
 
                     }
+
+                }
+
+                break;
+            case "simboloes":
+
+                if (digito == "√") {
+
+                    p.operaciones.innerHTML = Math.sqrt(
+                        parseFloat(p.operaciones.innerHTML)
+                    );
+
+                }
+
+                else if (digito == "x²") {
+
+                    p.operaciones.innerHTML =
+                        Math.pow(parseFloat(p.operaciones.innerHTML), 2);
+
+                }
+
+                else if (digito == "sin") {
+
+                    p.operaciones.innerHTML =
+                        Math.sin(parseFloat(p.operaciones.innerHTML));
+
+                }
+
+                else if (digito == "cos") {
+
+                    p.operaciones.innerHTML =
+                        Math.cos(parseFloat(p.operaciones.innerHTML));
 
                 }
 
